@@ -1,0 +1,114 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Cuong P. Luu": {
+      "orcid": "0000-0001-9768-0150"
+    },
+    "Jordan Ranum": {
+      "orcid": "0009-0003-3351-1528"
+    },
+    "Youngwon Youn": {},
+    "Jennifer L. Perrault": {},
+    "Bryan M. Krause": {},
+    "Matthew I. Banks": {
+      "orcid": "0000-0002-1936-7529"
+    },
+    "Laura Buyan-Dent": {
+      "orcid": "0000-0002-1278-6149"
+    },
+    "Kip A. Ludwig": {},
+    "Wendell B. Lake": {},
+    "Aaron J. Suminski": {
+      "orcid": "0000-0002-8793-5049"
+    }
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.5061/dryad.cjsxksngp",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.1016/j.brs.2025.06.004",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.1101/2024.12.02.24317799",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000436",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000436",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "University of Wisconsin-Madison School of Medicine and Public Health"
+    },
+    {
+      "funder_name": "Partial funding of AJS and WBL from Cala Health, Inc. (preprint)"
+    },
+    {
+      "funder_name": "Cala Health, Inc."
+    }
+  ],
+  "title": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
+  "license": "CC0-1.0",
+  "dataset_type": "derivative",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "37.72 GB (179 files)"
+  ],
+  "formats": [
+    ".eeg",
+    ".json",
+    ".mat",
+    ".md",
+    ".py",
+    ".tsv",
+    ".txt",
+    ".vhdr",
+    ".vmrk",
+    ".zip"
+  ],
+  "description": "Intraoperative microelectrode recordings from the ventral intermediate (VIM) thalamus region of 9 adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded with and without transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy. This derivative repackages the authors' processed, software-filtered 48 kHz signals into BIDS (BrainVision float32), with motion-artifact blanking masks provided as events.",
+  "methods_description": "Recordings were made with FHC Guideline 4000 LP+ using anterior, center and posterior Ben-gun microelectrodes, each recorded bipolar against a macro contact. Sampling was at 48 kHz, with 60 s trials per condition (TAPS off/on) at each depth. The authors' processing applied software low-pass filtering, offset removal and trimming to 60 s, and computed motion-artifact blanking masks.",
+  "keywords": [
+    {
+      "term": "essential tremor"
+    },
+    {
+      "term": "microelectrode recording"
+    },
+    {
+      "term": "Deep Brain Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
+    },
+    {
+      "term": "Thalamus",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D013788"
+    },
+    {
+      "term": "transcutaneous afferent patterned stimulation"
+    },
+    {
+      "term": "intraoperative electrophysiology"
+    }
+  ],
+  "source_hash": "5ad80fd1625f9d97b7ed7de72c83e17925d96fe565b2cdf458d36ce7bcb22dd4"
+}
