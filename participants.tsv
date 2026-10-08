@@ -1,0 +1,10 @@
+participant_id	age	sex	diagnosis	implant_side	taps_treated_hand	taps_frequency_hz	taps_amplitude_ma
+sub-02	n/a	n/a	essential tremor	Left	right	n/a	7
+sub-03	n/a	n/a	essential tremor	Right	left	4.5	7
+sub-06	n/a	n/a	essential tremor	Left	right	4.5	6.5
+sub-07	n/a	n/a	essential tremor	Right	left	n/a	7.25
+sub-08	n/a	n/a	essential tremor	Left	right	5.7	5.75
+sub-09	n/a	n/a	essential tremor	Left	right	8.1	6.5
+sub-10	n/a	n/a	essential tremor	Left	right	5.3	7.75
+sub-11	n/a	n/a	essential tremor	Left	right	6.5	6
+sub-12	n/a	n/a	essential tremor	Left	right	4.1	9.5

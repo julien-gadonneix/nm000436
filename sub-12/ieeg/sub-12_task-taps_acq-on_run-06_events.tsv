@@ -1,0 +1,15 @@
+onset	duration	trial_type	sample	channel	depth_label
+0.0	60.0	taps_on_trial	0	n/a	06a
+0.586667	0.2005	artifact_blanked_by_authors	28160	all	06a
+1.290417	0.200521	artifact_blanked_by_authors	61940	all	06a
+3.380313	0.479083	artifact_blanked_by_authors	162255	all	06a
+4.42675	0.707854	artifact_blanked_by_authors	212484	all	06a
+13.777896	0.226146	artifact_blanked_by_authors	661339	all	06a
+15.078646	0.201396	artifact_blanked_by_authors	723775	all	06a
+17.102542	1.468854	artifact_blanked_by_authors	820922	all	06a
+20.877792	1.476521	artifact_blanked_by_authors	1002134	all	06a
+47.698083	0.247729	artifact_blanked_by_authors	2289508	all	06a
+54.361917	0.470438	artifact_blanked_by_authors	2609372	all	06a
+55.348979	0.262917	artifact_blanked_by_authors	2656751	all	06a
+58.041333	0.507771	artifact_blanked_by_authors	2785984	all	06a
+59.223083	0.223271	artifact_blanked_by_authors	2842708	all	06a

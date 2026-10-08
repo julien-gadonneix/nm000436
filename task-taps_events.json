@@ -1,0 +1,19 @@
+{
+  "trial_type": {
+    "Description": "Event type",
+    "Levels": {
+      "taps_off_trial": "whole 60 s trial without TAPS (P-File base)",
+      "taps_on_trial": "whole 60 s trial during TAPS (P-File stim)",
+      "artifact_blanked_by_authors": "segment marked by the authors' motion-artefact blanking mask (P-File blankingMask); the samples in the data files are NOT blanked"
+    }
+  },
+  "sample": {
+    "Description": "Onset sample (0-based, 48 kHz)"
+  },
+  "channel": {
+    "Description": "Channels the blanking segment applies to ('all' = identical mask on every channel)"
+  },
+  "depth_label": {
+    "Description": "P-File recDepth label of the recording"
+  }
+}

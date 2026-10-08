@@ -1,0 +1,36 @@
+{
+  "taps": {
+    "Description": "TAPS state: off (P-File base) or on (P-File stim)"
+  },
+  "depth_label": {
+    "Description": "P-File recDepth label ('10a' = 10 mm above the planned target; suffixes such as '_3030' or '_filt' as released, meaning not documented)"
+  },
+  "depth_mm_above_target": {
+    "Description": "P-File chanCoord z",
+    "Units": "mm"
+  },
+  "source_cell": {
+    "Description": "P-File struct cell <base|stim>(row, columns) (MATLAB 1-based) and trial index for multi-trial cells"
+  },
+  "trial_start_tick": {
+    "Description": "P-File trialTimes start (acquisition clock ticks of timeCalib = 20.833 us)"
+  },
+  "trial_end_tick": {
+    "Description": "P-File trialTimes end"
+  },
+  "trial_start_s_acquisition_clock": {
+    "Description": "trial_start_tick x timeCalib: seconds on the FHC acquisition clock (relative, not a date)",
+    "Units": "s"
+  },
+  "taps_frequency_hz": {
+    "Description": "P-File stimFreq (n/a if NaN or TAPS off)",
+    "Units": "Hz"
+  },
+  "taps_amplitude_ma": {
+    "Description": "P-File stimMiliAmp (TAPS on only)",
+    "Units": "mA"
+  },
+  "artifact_blanked_fraction": {
+    "Description": "Fraction of samples in the authors' blanking mask (any channel)"
+  }
+}

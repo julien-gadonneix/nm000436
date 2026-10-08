@@ -1,0 +1,10 @@
+filename	acq_time	taps	depth_label	depth_mm_above_target	source_cell	trial_start_tick	trial_end_tick	trial_start_s_acquisition_clock	taps_frequency_hz	taps_amplitude_ma	artifact_blanked_fraction
+ieeg/sub-06_task-taps_acq-off_run-01_ieeg.vhdr	n/a	off	10a	10.0	base(1,1:3)	245779793.0	248659854.0	5120.4125	n/a	n/a	0.055839
+ieeg/sub-06_task-taps_acq-off_run-02_ieeg.vhdr	n/a	off	05a	5.0	base(2,1:3)	280386868.0	283266929.0	5841.3933	n/a	n/a	0.057618
+ieeg/sub-06_task-taps_acq-on_run-03_ieeg.vhdr	n/a	on	05a	5.0	stim(2,1:3)	285320668.0	288200729.0	5944.1808	4.5	6.5	0.087318
+ieeg/sub-06_task-taps_acq-off_run-04_ieeg.vhdr	n/a	off	03a	3.0	base(3,1:3)	302590472.0	305470533.0	6303.9684	n/a	n/a	0.065675
+ieeg/sub-06_task-taps_acq-on_run-05_ieeg.vhdr	n/a	on	03a	3.0	stim(3,1:3) trial 1 of 2	312106402.0	314986463.0	6502.2169	4.5	6.5	0.100758
+ieeg/sub-06_task-taps_acq-on_run-06_ieeg.vhdr	n/a	on	03a	3.0	stim(3,1:3) trial 2 of 2	n/a	n/a	n/a	4.5	6.5	0.066149
+ieeg/sub-06_task-taps_acq-off_run-07_ieeg.vhdr	n/a	off	00a	0.0	base(4,1:3)	332258525.0	335138586.0	6922.0528	n/a	n/a	0.140718
+ieeg/sub-06_task-taps_acq-on_run-08_ieeg.vhdr	n/a	on	00a	0.0	stim(4,1:3)	336302284.0	339182345.0	7006.2978	4.5	6.5	0.285973
+ieeg/sub-06_task-taps_acq-on_run-09_ieeg.vhdr	n/a	on	00a_3030	0.0	stim(5,1:3)	339273074.0	342153135.0	7068.1893	4.5	6.5	0.468983

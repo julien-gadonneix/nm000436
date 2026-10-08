@@ -1,0 +1,27 @@
+{
+  "name": {
+    "Description": "<track>_d<depth label>: microelectrode track (Ant/Cen/Pos) at one recording depth; DBS_implant / DBS_therapy: final DBS lead / therapeutic contact (P-File implantCoord / therapyCoord)"
+  },
+  "x": {
+    "Description": "P-File coordinate x (mm); frame not stated by the authors (see coordsystem.json)",
+    "Units": "mm"
+  },
+  "y": {
+    "Description": "P-File coordinate y (mm): +2 anterior, 0 center, -2 posterior Ben-gun track",
+    "Units": "mm"
+  },
+  "z": {
+    "Description": "P-File coordinate z (mm) = recording depth label, mm above the planned target along the trajectory",
+    "Units": "mm"
+  },
+  "type": {
+    "Description": "microelectrode, DBS lead position or therapeutic DBS contact"
+  },
+  "track": {
+    "Description": "Ben-gun track (anterior/center/posterior)"
+  },
+  "depth_label": {
+    "Description": "P-File recDepth label (e.g. '10a' = 10 mm above target)"
+  },
+  "SpatialReference": "none: no image; coordinates are offsets (mm) from the planned surgical target as stored in the P-Files (see coordsystem.json)"
+}

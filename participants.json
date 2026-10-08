@@ -1,0 +1,26 @@
+{
+  "age": {
+    "Description": "Not released per subject (article: group 65 +/- 7 years)",
+    "Units": "year"
+  },
+  "sex": {
+    "Description": "Not released per subject (article: 2 of 9 female)"
+  },
+  "diagnosis": {
+    "Description": "Medication-refractory essential tremor (article)"
+  },
+  "implant_side": {
+    "Description": "Hemisphere of the DBS implant / recording (P-File implantSide)"
+  },
+  "taps_treated_hand": {
+    "Description": "Hand that received TAPS (TETRAS Data Log.csv treated_hand)"
+  },
+  "taps_frequency_hz": {
+    "Description": "TAPS frequency (P-File stimFreq); n/a where the P-File stores NaN",
+    "Units": "Hz"
+  },
+  "taps_amplitude_ma": {
+    "Description": "TAPS amplitude (P-File stimMiliAmp)",
+    "Units": "mA"
+  }
+}

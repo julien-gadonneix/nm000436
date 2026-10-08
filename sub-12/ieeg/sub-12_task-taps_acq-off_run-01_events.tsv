@@ -1,0 +1,9 @@
+onset	duration	trial_type	sample	channel	depth_label
+0.0	60.0	taps_off_trial	0	n/a	10a
+2.781354	0.202542	artifact_blanked_by_authors	133505	all	10a
+8.098458	1.052812	artifact_blanked_by_authors	388726	all	10a
+18.308062	3.773042	artifact_blanked_by_authors	878787	all	10a
+25.048708	1.348583	artifact_blanked_by_authors	1202338	all	10a
+41.217562	1.302792	artifact_blanked_by_authors	1978443	all	10a
+44.062896	0.200896	artifact_blanked_by_authors	2115019	all	10a
+59.215458	0.201271	artifact_blanked_by_authors	2842342	all	10a

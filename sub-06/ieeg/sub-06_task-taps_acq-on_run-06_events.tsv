@@ -1,0 +1,7 @@
+onset	duration	trial_type	sample	channel	depth_label
+0.0	60.0	taps_on_trial	0	n/a	03a
+6.451229	0.329479	artifact_blanked_by_authors	309659	all	03a
+32.896167	0.895771	artifact_blanked_by_authors	1579016	all	03a
+35.586542	1.188417	artifact_blanked_by_authors	1708154	all	03a
+37.810604	1.061854	artifact_blanked_by_authors	1814909	all	03a
+59.506604	0.493396	artifact_blanked_by_authors	2856317	all	03a

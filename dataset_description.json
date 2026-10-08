@@ -1,0 +1,61 @@
+{
+  "Name": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
+  "BIDSVersion": "1.10.0",
+  "DatasetType": "derivative",
+  "License": "CC0-1.0",
+  "Authors": [
+    "Cuong P. Luu",
+    "Jordan Ranum",
+    "Youngwon Youn",
+    "Jennifer L. Perrault",
+    "Bryan M. Krause",
+    "Matthew I. Banks",
+    "Laura Buyan-Dent",
+    "Kip A. Ludwig",
+    "Wendell B. Lake",
+    "Aaron J. Suminski"
+  ],
+  "Acknowledgements": "Data and code released on Dryad by Cuong P. Luu et al. (University of Wisconsin-Madison). Repackaged to BIDS for NEMAR.",
+  "HowToAcknowledge": "Cite Luu et al. (2025) Brain Stimulation, doi:10.1016/j.brs.2025.06.004, and the Dryad dataset doi:10.5061/dryad.cjsxksngp.",
+  "Funding": [
+    "University of Wisconsin-Madison School of Medicine and Public Health",
+    "Partial funding of AJS and WBL from Cala Health, Inc. (preprint)"
+  ],
+  "EthicsApprovals": [
+    "University of Wisconsin-Madison Institutional Review Board, protocol 2018-1052"
+  ],
+  "ReferencesAndLinks": [
+    "https://doi.org/10.5061/dryad.cjsxksngp",
+    "https://doi.org/10.1016/j.brs.2025.06.004",
+    "https://doi.org/10.1101/2024.12.02.24317799"
+  ],
+  "Keywords": [
+    "essential tremor",
+    "ventral intermediate nucleus",
+    "thalamus",
+    "microelectrode recording",
+    "deep brain stimulation",
+    "peripheral nerve stimulation",
+    "TAPS",
+    "intraoperative"
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "doi:10.5061/dryad.cjsxksngp",
+      "URL": "https://datadryad.org/dataset/doi:10.5061/dryad.cjsxksngp",
+      "Version": "Dryad version 412969 (published 2025-12-10)"
+    }
+  ],
+  "GeneratedBy": [
+    {
+      "Name": "Authors' processing (MER_loadData -> MER_preprocess)",
+      "Description": "FHC Guideline 4000 LP+ recordings (48 kHz, .apm) loaded into 'R files' (not released) and processed into the released P-Files by MER_preprocess.m (not released): field 'raw' is software low-pass filtered (steep digital roll-off near 8-10 kHz, measured), offset-removed (zero mean) and trimmed to exactly 60 s per trial; motion-artefact masks computed (blankingMask).",
+      "CodeURL": "https://doi.org/10.5061/dryad.cjsxksngp"
+    },
+    {
+      "Name": "b3d_convert_vim.py",
+      "Description": "Repackaging of the P-File field 'raw' (float64, µV) to BrainVision IEEE float32 (relative rounding <= 6e-8, bit-exact to float32 of the P-File values), one run per 60 s trial; TAPS state as acq-off/on; depth, source cell and TAPS settings in scans.tsv; authors' blanking masks as events; coordinates as released (space-Other). Code in code/.",
+      "Version": "2026-10-08"
+    }
+  ]
+}
