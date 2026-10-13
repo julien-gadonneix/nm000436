@@ -1,6 +1,11 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
+  "title": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
+  "description": "Intraoperative microelectrode recordings from the ventral intermediate (VIM) thalamus region of 9 adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded with and without transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy applied to the treated hand. This derivative release contains the authors' processed, software-filtered 48 kHz signals repackaged in BIDS (BrainVision format) with depth, stimulation settings and artifact-mask annotations.",
+  "methods_description": "Recordings were made with FHC Guideline 4000 LP+ systems using anterior, center and posterior Ben-gun microelectrodes, each recorded bipolar against a macro contact 1 cm dorsal to the tip. 60 s trials were acquired at each depth without and with TAPS. The authors' processing low-pass filtered the signals, removed offsets, trimmed each trial to 60 s and computed motion-artifact blanking masks. The processed values were then stored as float32 BrainVision files.",
+  "license": "CC0-1.0",
+  "dataset_type": "derivative",
   "authors": {
     "Cuong P. Luu": {
       "orcid": "0000-0001-9768-0150"
@@ -23,6 +28,35 @@
       "orcid": "0000-0002-8793-5049"
     }
   },
+  "keywords": [
+    {
+      "term": "Essential Tremor",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D020329"
+    },
+    {
+      "term": "Deep Brain Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
+    },
+    {
+      "term": "Thalamus",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D013788"
+    },
+    {
+      "term": "microelectrode recording"
+    },
+    {
+      "term": "ventral intermediate nucleus"
+    },
+    {
+      "term": "transcutaneous afferent patterned stimulation"
+    },
+    {
+      "term": "intraoperative electrophysiology"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.5061/dryad.cjsxksngp",
@@ -61,14 +95,11 @@
       "funder_name": "Cala Health, Inc."
     }
   ],
-  "title": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
-  "license": "CC0-1.0",
-  "dataset_type": "derivative",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "iEEG Dataset",
   "modalities": [
     "ieeg"
   ],
-  "resource_type_specific": "iEEG Dataset",
   "sizes": [
     "37.72 GB (179 files)"
   ],
@@ -82,33 +113,8 @@
     ".txt",
     ".vhdr",
     ".vmrk",
+    ".yml",
     ".zip"
   ],
-  "description": "Intraoperative microelectrode recordings from the ventral intermediate (VIM) thalamus region of 9 adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded with and without transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy. This derivative repackages the authors' processed, software-filtered 48 kHz signals into BIDS (BrainVision float32), with motion-artifact blanking masks provided as events.",
-  "methods_description": "Recordings were made with FHC Guideline 4000 LP+ using anterior, center and posterior Ben-gun microelectrodes, each recorded bipolar against a macro contact. Sampling was at 48 kHz, with 60 s trials per condition (TAPS off/on) at each depth. The authors' processing applied software low-pass filtering, offset removal and trimming to 60 s, and computed motion-artifact blanking masks.",
-  "keywords": [
-    {
-      "term": "essential tremor"
-    },
-    {
-      "term": "microelectrode recording"
-    },
-    {
-      "term": "Deep Brain Stimulation",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
-    },
-    {
-      "term": "Thalamus",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D013788"
-    },
-    {
-      "term": "transcutaneous afferent patterned stimulation"
-    },
-    {
-      "term": "intraoperative electrophysiology"
-    }
-  ],
-  "source_hash": "5ad80fd1625f9d97b7ed7de72c83e17925d96fe565b2cdf458d36ce7bcb22dd4"
+  "source_hash": "1dd7510a574cf489bd6b5f51b2843c3d2ac38e123b8bab5da98f7fc9e79cedef"
 }
