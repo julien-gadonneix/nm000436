@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
-  "description": "Intraoperative microelectrode recordings from the ventral intermediate nucleus (VIM) of the thalamus in 9 adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded without and with transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy, applied to the treated hand. This derivative BIDS repackaging contains the authors' processed, software-filtered signals (48 kHz) stored in BrainVision format, with motion-artifact masks as events.",
-  "methods_description": "Recordings were acquired with an FHC Guideline 4000 LP+ system at 48 kHz from anterior, center and posterior Ben-gun microelectrodes, each bipolar against a macro contact. For each depth, 60 s trials were recorded with TAPS off and on. The authors' processed signals were low-pass filtered, zero-mean, trimmed to 60 s and converted to BrainVision float32, with artifact-blanking masks provided as events.",
+  "description": "Intraoperative microelectrode recordings from the ventral intermediate (VIM) thalamus of nine adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded with and without transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy applied to the treated hand. This derivative repackages the authors' processed 48 kHz signals into BIDS (BrainVision format), with depth, stimulation settings and motion-artifact masks provided as metadata and events.",
+  "methods_description": "Recordings were made with FHC Guideline 4000 LP+ at 48 kHz from anterior, center and posterior Ben-gun microelectrodes, each referenced bipolar to a macro contact. For each trial, 60 s were recorded with TAPS off and with TAPS on. The authors' processing applied software low-pass filtering, offset removal, trimming to 60 s and motion-artifact mask computation. The processed signals were then converted to BrainVision float32.",
   "license": "CC0-1.0",
   "dataset_type": "derivative",
   "authors": {
@@ -35,26 +35,26 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D020329"
     },
     {
-      "term": "Deep Brain Stimulation",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
-    },
-    {
       "term": "Thalamus",
       "subject_scheme": "MeSH",
       "value_uri": "http://id.nlm.nih.gov/mesh/D013788"
     },
     {
+      "term": "Deep Brain Stimulation",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D046690"
+    },
+    {
       "term": "microelectrode recording"
+    },
+    {
+      "term": "transcutaneous afferent patterned stimulation"
     },
     {
       "term": "ventral intermediate nucleus"
     },
     {
-      "term": "peripheral nerve stimulation"
-    },
-    {
-      "term": "intraoperative recording"
+      "term": "intraoperative electrophysiology"
     }
   ],
   "related_identifiers": [
