@@ -1,5 +1,5 @@
 {
-  "Name": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
+  "Name": "Luu-2025-wearable-10.1016/j.brs.2025.06.004",
   "BIDSVersion": "1.10.0",
   "DatasetType": "derivative",
   "License": "CC0-1.0",
@@ -59,5 +59,5 @@
     }
   ],
   "DatasetDOI": "10.82901/nemar.nm000436",
-  "Version": "1.0.0"
+  "Version": "1.0.1"
 }
