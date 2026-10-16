@@ -1,9 +1,9 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
-  "title": "Intraoperative VIM thalamus microelectrode recordings during transcutaneous afferent patterned stimulation (TAPS) for essential tremor (Luu et al.; derivative: authors' processed 48 kHz signals)",
-  "description": "Intraoperative microelectrode recordings from the ventral intermediate (VIM) thalamus region of 9 adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded with and without transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy applied to the treated hand. This derivative release contains the authors' processed, software-filtered 48 kHz signals repackaged in BIDS (BrainVision format) with depth, stimulation settings and artifact-mask annotations.",
-  "methods_description": "Recordings were made with FHC Guideline 4000 LP+ systems using anterior, center and posterior Ben-gun microelectrodes, each recorded bipolar against a macro contact 1 cm dorsal to the tip. 60 s trials were acquired at each depth without and with TAPS. The authors' processing low-pass filtered the signals, removed offsets, trimmed each trial to 60 s and computed motion-artifact blanking masks. The processed values were then stored as float32 BrainVision files.",
+  "title": "Luu-2025-wearable-10.1016/j.brs.2025.06.004",
+  "description": "Intraoperative microelectrode recordings from the ventral intermediate nucleus (VIM) of the thalamus in 9 adults with medication-refractory essential tremor undergoing deep brain stimulation surgery. At each recording depth, 60 s were recorded without and with transcutaneous afferent patterned stimulation (TAPS), a wearable peripheral nerve stimulation therapy, applied to the treated hand. This derivative BIDS repackaging contains the authors' processed, software-filtered signals (48 kHz) stored in BrainVision format, with motion-artifact masks as events.",
+  "methods_description": "Recordings were acquired with an FHC Guideline 4000 LP+ system at 48 kHz from anterior, center and posterior Ben-gun microelectrodes, each bipolar against a macro contact. For each depth, 60 s trials were recorded with TAPS off and on. The authors' processed signals were low-pass filtered, zero-mean, trimmed to 60 s and converted to BrainVision float32, with artifact-blanking masks provided as events.",
   "license": "CC0-1.0",
   "dataset_type": "derivative",
   "authors": {
@@ -51,10 +51,10 @@
       "term": "ventral intermediate nucleus"
     },
     {
-      "term": "transcutaneous afferent patterned stimulation"
+      "term": "peripheral nerve stimulation"
     },
     {
-      "term": "intraoperative electrophysiology"
+      "term": "intraoperative recording"
     }
   ],
   "related_identifiers": [
@@ -116,5 +116,5 @@
     ".yml",
     ".zip"
   ],
-  "source_hash": "1dd7510a574cf489bd6b5f51b2843c3d2ac38e123b8bab5da98f7fc9e79cedef"
+  "source_hash": "6021c6daf2ed8217ecb4fc6054956c640b36edc96fd66c56ffe64ce8361b37aa"
 }
