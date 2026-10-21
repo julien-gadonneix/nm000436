@@ -16,11 +16,11 @@ treated hand, a wearable peripheral nerve stimulation therapy. Remifentanil was 
   ieeg-b3w10-vim-insp-1008005934 and ieeg-b3w10-vim-quant-1008010513):
   - every trace is exactly 2,880,000 samples = 60.0 s at 48 kHz per trial, while the acquisition timestamps (trialTimes)
     span 2,880,013-2,880,061 ticks: trimmed to exactly 60 s;
-  - the mean of each 60 s trace is ~1e-5..6e-4 µV against a standard deviation of 1e3..7e3 µV (relative 1e-8): offset removed in software;
+  - the mean of each 60 s trace is ~1e-5..6e-4 against a standard deviation of 1e3..7e3 (relative 1e-8): offset removed in software;
   - the power spectrum falls by 13-20 orders of magnitude between 6-8 kHz and 20-24 kHz, i.e. a steep double-precision
     digital low-pass near 8-10 kHz, whereas the article states a 20 kHz hardware band limit;
-  - the values are not on any ADC quantisation grid (FHC .apm files store integer samples times voltageCalib), so they are
-    not a scaled copy of the acquired samples.
+  - the values are FHC 16-bit ADC counts, filtered (no longer integers) but not multiplied by voltageCalib: where a trace
+    clips, the positive and negative plateaus lie 65.0-65.6k apart (2^16 = 65,536; sub-07 base and stim).
 - Further derived fields of the P-Files (lfp, spk, rawLPCheby, rawBPCheby, raw_blanked, spk_blanked, spike waveforms, PSDs)
   are not converted; they remain available in sourcedata/P-Files.
 
@@ -33,11 +33,13 @@ treated hand, a wearable peripheral nerve stimulation therapy. Remifentanil was 
 - `sub-<NN>_scans.tsv`: TAPS state, depth label and depth (mm above target), source P-File cell, acquisition-clock trial
   times, TAPS frequency/amplitude, fraction of samples in the authors' artefact mask.
 - Channels `Ant`, `Cen`, `Pos`: the anterior, center and posterior Ben-gun microelectrodes (2 mm apart), each recorded
-  bipolar against the macro contact 1 cm dorsal to its tip (article); type DBS, µV (unit from the authors' figure labels).
+  bipolar against the macro contact 1 cm dorsal to its tip (article); type DBS, units n/a (ADC counts). µV = value x the
+  P-File voltageCalib: Ant 0.02195717, Cen 0.02259168, Pos 0.02262028, the same in all 9 P-Files (unit of voltageCalib not
+  stated; µV per count gives std 28-92 µV in sub-07). The authors' figure code labels these counts uV.
 - `events.tsv`: the whole trial (`taps_off_trial` / `taps_on_trial`) and the segments of the authors' motion-artefact
   blanking mask (`artifact_blanked_by_authors`). The data samples themselves are not blanked.
 - Data format: BrainVision IEEE float32. BrainVision has no float64; the float64 P-File values are stored as float32
-  (relative rounding <= 6e-8, at most 0.002 µV, far below the ~0.022 µV ADC step).
+  (relative rounding <= 6e-8, at most 0.002 counts).
   Every file was read back and is bit-identical to float32 of the P-File values. The float64 originals are in sourcedata/.
 - Electrodes: `space-Other` per subject, with the P-File coordinates in mm (chanCoord for each track and depth, implantCoord
   and therapyCoord for the final DBS lead and therapeutic contact). CAVEAT: the authors do not state the frame. The values
