@@ -1,4 +1,4 @@
-"""voltageCalib, amplitude statistics and clipping plateaus of nm000436 P-File 'raw'.
+"""voltageCalib per P-File, header units, amplitude statistics and clipping plateaus of nm000436.
 
 Usage:
     python 2026-10-22_units-na-voltagecalib.py <nm000436 root> <git clone> <P-File dir>
@@ -66,27 +66,69 @@ def main(root: Path, clone: Path, pfiles: Path) -> None:
     print(f"{REV} of the clone: {git(clone, 'rev-parse', REV)}")
 
     calib = []
+    print(
+        "\n## voltageCalib read from each P-File (fields /base/voltageCalib and /stim/voltageCalib)"
+    )
+    print(
+        "| P-File | sha256 = annex key | dtype | non-empty cells (base + stim) | Ant | Cen | Pos |"
+    )
+    print("|---|---|---|---:|---|---|---|")
     for path in sorted(pfiles.glob("P-CH1052-*.mat")):
-        ok = annex_ok(path, clone, f"sourcedata/P-Files/{path.name}")
-        print(f"sourcedata/P-Files/{path.name}: sha256 = git-annex key: {ok}")
+        rel = f"sourcedata/P-Files/{path.name}"
+        cells = []
         with h5py.File(path, "r") as f:
             for group in ("base", "stim"):
-                n_rows, n_cols = f[group]["voltageCalib"].shape
-                for row in range(n_rows):
-                    for col in range(n_cols):
-                        v = cell(f, group, "voltageCalib", row, col)
+                refs = f[group]["voltageCalib"]
+                for row in range(refs.shape[0]):
+                    for col in range(refs.shape[1]):
+                        dataset = f[refs[row, col]]
+                        v = np.asarray(dataset).ravel()
                         if v.size == 1:  # empty cells hold [0, 0]
-                            calib.append((path.name, CHANNELS[row], float(v[0])))
-    calib = pd.DataFrame(calib, columns=["pfile", "channel", "voltageCalib"])
-    per_ch = calib.groupby("channel").voltageCalib.agg(["unique", "size"])
-    per_ch["pfiles"] = calib.groupby("channel").pfile.nunique()
-    print("\n## voltageCalib per channel over all P-File cells")
-    print("| channel | distinct values | value (8 decimals) | cells | P-Files |")
-    print("|---|---:|---|---:|---:|")
-    for ch, r in per_ch.iterrows():
-        values = ", ".join(f"{v:.8f}" for v in r["unique"])
-        print(f"| {ch} | {len(r['unique'])} | {values} | {r['size']} | {r['pfiles']} |")
-    factor = {ch: r["unique"][0] for ch, r in per_ch.iterrows()}
+                            cells.append(
+                                (
+                                    path.name,
+                                    group,
+                                    CHANNELS[row],
+                                    float(v[0]),
+                                    str(dataset.dtype),
+                                )
+                            )
+        df = pd.DataFrame(
+            cells, columns=["pfile", "group", "channel", "voltageCalib", "dtype"]
+        )
+        values = " | ".join(
+            "; ".join(
+                repr(float(v)) for v in df[df.channel == ch].voltageCalib.unique()
+            )
+            for ch in CHANNELS
+        )
+        n = df.group.value_counts()
+        print(
+            f"| {rel} | {annex_ok(path, clone, rel)} | {', '.join(df.dtype.unique())} "
+            f"| {n.get('base', 0)} + {n.get('stim', 0)} | {values} |"
+        )
+        calib.append(df)
+    calib = pd.concat(calib)
+    per_ch = calib.groupby("channel").agg(
+        distinct=("voltageCalib", "nunique"),
+        cells=("voltageCalib", "size"),
+        pfiles=("pfile", "nunique"),
+    )
+    print(f"per electrode over all P-Files: {per_ch.to_dict('index')}")
+    factor = calib.groupby("channel").voltageCalib.first().to_dict()
+
+    vhdrs = sorted(root.glob("sub-*/ieeg/*_ieeg.vhdr"))
+    units = []
+    for vhdr in vhdrs:
+        lines = vhdr.read_text(encoding="utf-8").splitlines()
+        units += [
+            line.rsplit(",", 1)[-1] for line in lines if re.match(r"Ch\d+=", line)
+        ]
+    headers_ok = [annex_ok(v, clone, v.relative_to(root).as_posix()) for v in vhdrs]
+    print(
+        f"\nBrainVision headers: {len(vhdrs)}, sha256 = git-annex key: {sum(headers_ok)}; "
+        f"channel records {len(units)}, units {pd.Series(units).value_counts().to_dict()}"
+    )
 
     rows, files = [], []
     for scans in sorted(root.glob("sub-*/sub-*_scans.tsv")):

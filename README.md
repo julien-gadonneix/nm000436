@@ -20,8 +20,10 @@ treated hand, a wearable peripheral nerve stimulation therapy. Remifentanil was 
     code/receipts/2026-10-22_units-na-voltagecalib.md): offset removed in software;
   - the power spectrum falls by 13-20 orders of magnitude between 6-8 kHz and 20-24 kHz, i.e. a steep double-precision
     digital low-pass near 8-10 kHz, whereas the article states a 20 kHz hardware band limit;
-  - the values are not on any ADC quantisation grid (FHC .apm files store integer samples times voltageCalib), so they are
-    not a scaled copy of the acquired samples.
+  - the values are not on an ADC quantisation grid: no trace is on the integer grid or on the voltageCalib grid
+    (code/receipts/2026-10-22_units-na-voltagecalib.md), whereas the authors' FHC reader (APMReadData.m) reads .apm
+    samples as integers and stores voltageCalib beside them without applying it; so they are not a scaled copy of the
+    acquired samples.
 - Further derived fields of the P-Files (lfp, spk, rawLPCheby, rawBPCheby, raw_blanked, spk_blanked, spike waveforms, PSDs)
   are not converted; they remain available in sourcedata/P-Files.
 
@@ -36,8 +38,9 @@ treated hand, a wearable peripheral nerve stimulation therapy. Remifentanil was 
 - Channels `Ant`, `Cen`, `Pos`: the anterior, center and posterior Ben-gun microelectrodes (2 mm apart), each recorded
   bipolar against the macro contact 1 cm dorsal to its tip (article); type DBS, units n/a: the release gives no unit for
   `raw` (Dryad README: '-'); the authors' figure code (Figures_Paper.m) plots it unscaled with a uV axis label. Each P-File
-  cell also gives voltageCalib: Ant 0.02195717, Cen 0.02259168, Pos 0.02262028, the same in all 9 P-Files (unit and use not
-  documented; Dryad README: '-').
+  cell also gives voltageCalib: Ant 0.02195717, Cen 0.02259168, Pos 0.02262028, the same in all 9 P-Files
+  (Dryad README: 'Voltage calibration factor', unit '-'; not applied here). The µV in the current BrainVision headers
+  is a repackaging label, not a documented unit; the converter in code/ writes n/a there.
 - `events.tsv`: the whole trial (`taps_off_trial` / `taps_on_trial`) and the segments of the authors' motion-artefact
   blanking mask (`artifact_blanked_by_authors`). The data samples themselves are not blanked.
 - Data format: BrainVision IEEE float32. BrainVision has no float64; the float64 P-File values are stored as float32
