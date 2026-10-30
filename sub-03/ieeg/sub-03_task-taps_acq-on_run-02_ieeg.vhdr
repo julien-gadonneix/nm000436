@@ -1,1 +1,19 @@
-/annex/objects/SHA256E-s482--70ccc770db526058317ba5371d20a8982a5932131c0d40b407eb23bb96d0adff.vhdr
+Brain Vision Data Exchange Header File Version 1.0
+; b3d_convert_vim.py: P-CH1052-03.mat stim(2,1:3) field 'raw' (float64, unit not documented) as float32
+
+[Common Infos]
+Codepage=UTF-8
+DataFile=sub-03_task-taps_acq-on_run-02_ieeg.eeg
+MarkerFile=sub-03_task-taps_acq-on_run-02_ieeg.vmrk
+DataFormat=BINARY
+DataOrientation=MULTIPLEXED
+NumberOfChannels=3
+SamplingInterval=20.833333333333332
+
+[Binary Infos]
+BinaryFormat=IEEE_FLOAT_32
+
+[Channel Infos]
+Ch1=Ant,,1.0,n/a
+Ch2=Cen,,1.0,n/a
+Ch3=Pos,,1.0,n/a

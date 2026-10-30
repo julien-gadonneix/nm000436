@@ -39,8 +39,8 @@ treated hand, a wearable peripheral nerve stimulation therapy. Remifentanil was 
   bipolar against the macro contact 1 cm dorsal to its tip (article); type DBS, units n/a: the release gives no unit for
   `raw` (Dryad README: '-'); the authors' figure code (Figures_Paper.m) plots it unscaled with a uV axis label. Each P-File
   cell also gives voltageCalib: Ant 0.02195717, Cen 0.02259168, Pos 0.02262028, the same in all 9 P-Files
-  (Dryad README: 'Voltage calibration factor', unit '-'; not applied here). The µV in the current BrainVision headers
-  is a repackaging label, not a documented unit; the converter in code/ writes n/a there.
+  (Dryad README: 'Voltage calibration factor', unit '-'; not applied here). The BrainVision headers also say n/a; they
+  are plain text files in git since version 1.0.3 (the annexed ones said µV), and the `.eeg` files are unchanged.
 - `events.tsv`: the whole trial (`taps_off_trial` / `taps_on_trial`) and the segments of the authors' motion-artefact
   blanking mask (`artifact_blanked_by_authors`). The data samples themselves are not blanked.
 - Data format: BrainVision IEEE float32. BrainVision has no float64; the float64 P-File values are stored as float32
