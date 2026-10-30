@@ -62,7 +62,7 @@ voltageCalib as stored in each P-File (Python `repr` of the float64 value):
   (`2026-10-30_vhdr-plain-git.md`).
 - 252 traces, all 2,880,000 samples; BrainVision = float32(`raw`) for 252/252; max |BrainVision - raw| 0.00195, max
   relative 6.0e-8 (README: relative <= 6e-8, absolute <= 0.002).
-- |mean| 4.9e-8 to 7.2e-4; std 472 to 7285; max |mean| / std 6.5e-7 (README amplitude bullet).
+- |mean| 4.9e-8 to 7.2e-4; std 472 to 7285; max |mean| / std 6.5e-7 (README section 'Corrections (version 1.0.3)').
 - Integer samples: 0 in every trace; samples on the voltageCalib grid: at most 4.5e-6 of a trace. The values are on
   neither grid, as the converter note says, so they are not described as ADC counts.
 

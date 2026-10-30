@@ -55,7 +55,7 @@
     {
       "Name": "b3d_convert_vim.py",
       "Description": "Repackaging of the P-File field 'raw' (float64, unit not documented) to BrainVision IEEE float32 (relative rounding <= 6e-8, bit-exact to float32 of the P-File values), one run per 60 s trial; TAPS state as acq-off/on; depth, source cell and TAPS settings in scans.tsv; authors' blanking masks as events; coordinates as released (space-Other). Code in code/.",
-      "Version": "2026-10-08"
+      "Version": "2026-10-30"
     }
   ],
   "DatasetDOI": "10.82901/nemar.nm000436",

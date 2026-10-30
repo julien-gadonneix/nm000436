@@ -1,9 +1,10 @@
-1.0.3 2026-10-21
+1.0.3 2026-10-30
   - Units: channels.tsv units µV -> n/a: the release gives no unit for the P-File field 'raw' (the µV came from the authors'
     figure axis labels); the converter writes n/a in channels.tsv and the BrainVision headers, and the 84 headers say n/a,
     committed as plain git text files (were annexed; .eeg files unchanged). The per-electrode P-File voltageCalib (unit
-    not documented, not applied) is listed in the channel descriptions; README (trace mean/std ranges from the receipt in
-    code/receipts) and GeneratedBy updated.
+    not documented, not applied) is listed in the channel descriptions. New README section 'Corrections (version 1.0.3)'
+    (units, voltageCalib, trace mean/std ranges from the receipt in code/receipts, ADC grid, float32 rounding); the
+    Contents lines it corrects are kept as published. GeneratedBy: converter description and Version (2026-10-30).
 
 1.0.2 2026-10-16
   - Restore the descriptive dataset Name recorded in the v1.0.0 history. Update generated metadata title and source hash.

@@ -386,7 +386,7 @@ wjson(os.path.join(OUT, "dataset_description.json"), {
     "GeneratedBy": [
         {"Name": "Authors' processing (MER_loadData -> MER_preprocess)", "Description": "FHC Guideline 4000 LP+ recordings (48 kHz, .apm) loaded into 'R files' (not released) and processed into the released P-Files by MER_preprocess.m (not released): field 'raw' is software low-pass filtered (steep digital roll-off near 8-10 kHz, measured), offset-removed (zero mean) and trimmed to exactly 60 s per trial; motion-artefact masks computed (blankingMask).",
          "CodeURL": "https://doi.org/10.5061/dryad.cjsxksngp"},
-        {"Name": "b3d_convert_vim.py", "Description": "Repackaging of the P-File field 'raw' (float64, unit not documented) to BrainVision IEEE float32 (relative rounding <= 6e-8, bit-exact to float32 of the P-File values), one run per 60 s trial; TAPS state as acq-off/on; depth, source cell and TAPS settings in scans.tsv; authors' blanking masks as events; coordinates as released (space-Other). Code in code/.", "Version": "2026-10-08"}],
+        {"Name": "b3d_convert_vim.py", "Description": "Repackaging of the P-File field 'raw' (float64, unit not documented) to BrainVision IEEE float32 (relative rounding <= 6e-8, bit-exact to float32 of the P-File values), one run per 60 s trial; TAPS state as acq-off/on; depth, source cell and TAPS settings in scans.tsv; authors' blanking masks as events; coordinates as released (space-Other). Code in code/.", "Version": "2026-10-30"}],
 })
 VC = {c: v for c, (v,) in VCAL.items()}  # one voltageCalib per electrode in all P-Files
 open(os.path.join(OUT, "README"), "w").write(f"""# VIM thalamus microelectrode recordings during TAPS for essential tremor (Luu et al. 2025) - DERIVATIVE
